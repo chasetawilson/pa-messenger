@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Montavilla Emergency Weather Shelter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+<style>
+.container {
+}
+.center_div {
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col col-sm-2 text-center">
+                    <img src="images/mewslogo.png" width="100px" height="100px"/>
+                </div>
+                <div class="col col-sm-10">
+                    <div class="h2">
+                        Montavilla Emergency Weather Shelter
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Enter your phone number below to join our volunteer notification list. You will receive a text message whenever volunteers are needed.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="input-group center_div">
+                        <form role="form" method='POST' action='/'>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" id="number-prefix">+1</span>
+                                <input type="text" name="number" max="10" class="form-control" id="number-input" placeholder="(123) 456-7890" aria-describedby="number-prefix">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button">Volunteer!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            {% for error in errors %}
+                <h4>{{ error }}</h4>
+            {% endfor %}
+        </div>
+        <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </body>
+</html>
