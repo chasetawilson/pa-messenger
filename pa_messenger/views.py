@@ -59,7 +59,7 @@ def construct_view_blueprint(app, db):
             if request.form['Body'].lower().startswith(SUBSCRIBE_COMMAND):
                 output = _process_message(request.form['Body'], subscriber)
             else:
-                output = "Thanks for contacting Montavilla EWS! Text 'subscribe' if you would like to receive updates via text message."
+                output = "Thanks for contacting Sunnyside Warming Shelter! Text 'subscribe' if you would like to receive updates via text message."
             db.session.commit()
         else:
             output = _process_message(request.form['Body'], subscriber)
