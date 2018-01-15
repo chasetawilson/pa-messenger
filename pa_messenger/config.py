@@ -2,14 +2,14 @@ import os
 
 
 class DefaultConfig(object):
-    SECRET_KEY = 'youshouldreallychangethis'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'postgresql://mews:mews@localhost/mewsdb')
-    TWILIO_ACCOUNT_SID = ''
-    TWILIO_AUTH_TOKEN = ''
-    TWILIO_NUMBER = ''
+    TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
+    TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
+    TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
     BASIC_AUTH_USERNAME = 'admin'
-    BASIC_AUTH_PASSWORD = 'SoSecret'
+    BASIC_AUTH_PASSWORD = os.environ.get('BASIC_AUTH_PASSWORD')
 
 
 class DevelopmentConfig(DefaultConfig):
