@@ -9,7 +9,7 @@ class DefaultConfig(object):
     TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
     TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
     BASIC_AUTH_USERNAME = 'admin'
-    BASIC_AUTH_PASSWORD = 'SoSecret'
+    BASIC_AUTH_PASSWORD = os.environ.get('BASIC_AUTH_PASSWORD')
 
 
 class DevelopmentConfig(DefaultConfig):
